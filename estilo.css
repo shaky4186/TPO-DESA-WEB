@@ -1,0 +1,135 @@
+*{
+
+    margin: 3px;
+    padding: 3px;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.padre{
+     display: flex;
+     flex-flow: column nowrap;
+}
+    .header{
+    background: #1C3879;
+    display: flex;
+    flex-flow: column nowrap;
+
+    }
+    .menu{
+        background: rgba(0,0, 0, alpha);
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100px;
+        align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,.5);
+    }
+    .menu a{
+        color: #fff;
+
+    }
+    .logo{
+        
+        flex:1 1 auto;
+      }
+
+      .logo a{
+        color: #fff;
+        font-size: 30px;
+
+      }
+      .logo a:hover{
+        color:#5F6F94
+      }
+    .nav{
+        
+        flex:5 1 auto;
+        
+    }
+    .nav a{
+        color:#fff;
+        font-size: 11px;
+        text-transform: uppercase;
+        padding:0 10px;
+        letter-spacing: 2px;
+
+    }
+    .nav a:hover{
+        color: #5F6F94;
+    }
+    .social{
+        
+        flex:1 1 auto;
+
+    }
+    .social a{
+        font-size: 11px;
+        text-transform: uppercase;
+        padding:0 10px;
+        letter-spacing: 2px;
+    }
+    .social a:hover{
+        color: #5F6F94;
+    }
+    .footer1{
+        background: #1C3879;
+        display:flex;
+    
+     }
+                    
+    .section{
+    background: #1C3879;
+    display:flex;
+    }
+
+    .articulos{
+
+        background: #EAE3D2;
+        flex:1 1 auto;
+        display: flex;
+        justify-content: center;
+      
+    }
+
+  
+    .footer{
+    background: #1C3879;
+    display: flex;
+    justify-content: center;
+    }
+
+
+
+    }
+
+    .pie{
+        background: #97D2EC;
+        width: 300px;
+        
+    }
+    @media all and (max-width: 800px){
+         .section{
+            flex-direction: column;
+         }
+       .menu{
+        flex-direction: column;
+        height: auto;
+       }
+    }
+
+    @media all and (max-width: 600px){
+        .articulos{
+            flex-direction: column;
+        }
+    }
+    @media all and (max-width: 100px){
+.aside{
+    flex-direction: column;
+}
+
+    }
