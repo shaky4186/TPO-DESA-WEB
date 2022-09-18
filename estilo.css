@@ -44,6 +44,10 @@ a{
       .logo a:hover{
         color:#5F6F94
       }
+
+    .logo img {
+        width: 8vw;
+    }
     .nav{
         
         flex:5 1 auto;
@@ -76,44 +80,23 @@ a{
     }
 
     .card-img-top {
-        width: 100vw;
+        width: 40vw;
     }
 
 
-    .footer1{
-        background: #1C3879;
-        display:flex;
-    
-     }
-                    
-    .section{
-    background: #1C3879;
-    display:flex;
-    }
-
-    .articulos{
-
-        background: #EAE3D2;
-        flex:1 1 auto;
-        display: flex;
-        justify-content: center;
-      
-    }
-
-  
     .footer{
     background: #1C3879;
     display: flex;
     justify-content: center;
     }
 
-
-
-    }
-
-    .pie{
-        background: #97D2EC;
-        width: 300px;
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        width: 100vw;
         
     }
     @media all and (max-width: 800px){
