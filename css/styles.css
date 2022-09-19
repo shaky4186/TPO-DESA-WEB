@@ -1,0 +1,208 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+    .contenedor-grid 
+    { 
+        display: grid;
+        grid-template-columns: 1fr 1.1fr 0.9fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "Header Header Header"
+            "Main Main Section"
+            "Footer Footer Footer";
+    }
+    
+    .Header { 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". . ."
+            ". . ."
+            ". . .";
+        grid-area: Header;
+    }
+    
+    .Main { 
+        grid-area: Main;
+        background-color: blue;
+    }
+    
+    .Section { 
+        grid-area: Section; 
+    }
+      
+      .Section {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "Section-1 Section-1 Section-1"
+          "Section-1 Section-1 Section-1"
+          "Section-2 Section-2 Section-2";
+        grid-area: Section;
+      }
+      
+      .Section-1 { 
+        grid-area: Section-1; 
+        background-color: red;
+    }
+      
+      .Section-2 { 
+        grid-area: Section-2; 
+        background-color: green;
+    }
+      
+    
+    .Footer { 
+        grid-area: Footer; 
+    }
+ 
+
+    .navbar-superior {
+        background: #1C3879;
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        height: auto;
+        padding: 0 0.5rem;
+    }
+ 
+   
+    .navbar-left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .navbar-left img {
+        height: 2rem;
+    }
+
+    .logo {
+        display: flex;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    .pestanias{
+        background: #1C3879;
+        display: flex;       
+        font-family: 'Poppins', sans-serif; 
+        padding-left: 50px;
+
+    }
+
+    .pestanias a{
+        color:#fff;
+        font-size: 11px;
+        padding:0 10px;
+        text-decoration: none;
+
+    }
+
+    .pestanias ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navbar-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #1C3879;
+    }
+    
+  
+    .redes{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    .redes a{
+        list-style: none;
+    }
+
+    .redes ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .redes li {
+        display: flex;
+        list-style: none;
+    }
+    
+    
+    .redes i {
+        color: #f5f5f5;
+        font-size: 1.5rem;
+        margin: 0.5rem;
+    }
+
+    .card {
+        border: 5px solid #f0f0f0;
+    }
+
+    .cards-section {
+        display: flex;
+    }
+
+    .dosCardsXLinea {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .card-img-top {
+        object-fit: cover;
+        width: 100%;
+        height: 60%;
+    }
+    
+
+
+    .Footer{
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        background-color: #1C3879;
+        width: 100vw;
+        
+    }
+    
+    @media all and (max-width: 800px){
+         .section{
+            flex-direction: column;
+         }
+       .menu{
+        flex-direction: column;
+        height: auto;
+       }
+    }
+
+    @media all and (max-width: 600px){
+        .articulos{
+            flex-direction: column;
+        }
+    }
+    @media all and (max-width: 100px){
+.aside{
+    flex-direction: column;
+}
+
+    }
