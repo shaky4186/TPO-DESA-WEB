@@ -3,94 +3,117 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif; 
 }
 
-.contenedor-grid 
-{ 
+/*Contenedores Grid*/
+.contenedor {  
     display: grid;
-    width: 100vw;
     grid-template-columns: 1fr 1.1fr 0.9fr;
+    grid-template-rows: 0.3fr 2.2fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "Header Header Header"
-        "Main Main Section"
-        "Footer Footer Footer";
-    }
-    
-.Header { 
+      "nav-area nav-area nav-area"
+      "main-area main-area section-area"
+      "footer-area footer-area footer-area";
+  }
+  
+  .main-area {  
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-area: Header;
-}
-    
-.Main { 
-    grid-area: Main;
-    background-color: blue;
-    }
-    
-.Section { 
-    grid-area: Section; 
-}
-      
-.Section {  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "Section-1 Section-1 Section-1"
-        "Section-1 Section-1 Section-1"
-        "Section-2 Section-2 Section-2";
-    grid-area: Section;
+      "card1 card1 card2 card2"
+      "card1 card1 card2 card2"
+      "card3 card3 card4 card4"
+      "card3 card3 card4 card4";
+    grid-area: main-area;
+  }
+  
+  .card1 { 
+    grid-area: card1; 
+    background-color: blueviolet;
 }
-      
-.Section-1 { 
-    grid-area: Section-1; 
-    background-color: red;
-    border: 5px solid #f0f0f0;
+  
+  .card2 { 
+    grid-area: card2;     
+    background-color: blue; 
 }
-      
-.Section-2 { 
-    grid-area: Section-2; 
+  
+  .card3 { 
+    grid-area: card3; 
+    background-color: aqua;
+}
+  
+  .card4 { 
+    grid-area: card4; 
+    background-color: yellowgreen;
+}
+  
+  .section-area {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "section1 section1"
+      "section1 section1"
+      "section1 section1"
+      "section2 section2"
+      "section2 section2";
+    grid-area: section-area;
+  }
+  
+  .section1 { 
+    grid-area: section1; 
     background-color: green;
-    border: 5px solid #f0f0f0;
 }
-      
-.Footer { 
-    grid-area: Footer; 
+  
+  .section2 { 
+    grid-area: section2; 
+    background-color: palevioletred;
 }
- 
+  
+  .footer-area { 
+    grid-area: footer-area; 
+    background-color: #1C3879;
+}
+  
+  .nav-area {  
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo-area navbar-area redes-area";
+    grid-area: nav-area;
+    background-color: #1C3879;
+    height: 10vh;
 
-.navbar-superior {
-    background: #1C3879;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    height: auto;
-    padding: 0 0.5rem;
+  }
+  
+  .logo-area { 
+    grid-area: logo-area; 
 }
- 
-.navbar-left {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-    
-.navbar-left img {
-    height: 2rem;
+  
+  .navbar-area { grid-area: navbar-area; }
+  
+  .redes-area { grid-area: redes-area; }
+/*Fin contenedores grid*/  
+
+/*AREA BARRA NAVEGACIÓN*/ 
+
+.logo-area img {
+    width: 30%;
+    padding-top: 3%;
+    padding-left: 3%;
 }
 
-.logo {
-    display: flex;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-.pestanias{
+/*.pestanias{
     background: #1C3879;
     display: flex;       
     font-family: 'Poppins', sans-serif; 
@@ -144,8 +167,12 @@
     margin: 0.5rem;
 }
 
-.card {
+/* .card {
     border: 5px solid #f0f0f0;
+}
+
+.cards-cursos {
+    border: 3px solid black;
 }
 
 .cards-section {
@@ -182,6 +209,10 @@
     display: flex;
     font-size: 1.5rem;
     padding-top: 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: fit-content;
+    height: auto;
 }
 
 .card-button {
@@ -203,10 +234,9 @@
     cursor: pointer;
 }
 
-
     
 
-.Footer{
+.footer{
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
@@ -237,4 +267,4 @@
     .aside{
         flex-direction: column;
     }
-}
+} */
