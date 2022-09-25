@@ -242,11 +242,20 @@
 
   /*Responsive*/
 @media (max-width: 780px) {
-  .container {  display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
+  .contenedor-grid {  
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "nav-area nav-area"
+      "main-area main-area"
+      "main-area main-area"
+      "main-area main-area"
+      "main-area main-area"
+      "section-area section-area"
+      "section-area section-area"
+      "footer-area footer-area"; 
   }
   
   .nav-area {  display: grid;
@@ -275,7 +284,10 @@
       "card4";
     grid-area: 2 / 1 / 6 / 3;
   }
-  
+
+  .card1, .card2, .card3, .card4 {
+      text-align: center;
+  }  
   .card1 { grid-area: card1; }
   
   .card2 { grid-area: card2; }
@@ -284,11 +296,18 @@
   
   .card4 { grid-area: card4; }
   
-  .section-area { grid-area: 6 / 1 / 8 / 3; }
-  
-  .section1 { grid-area: 6 / 1 / 7 / 3; }
-  
-  .section2 { grid-area: 7 / 1 / 8 / 3; }
+  .section-area {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "section1"
+      "section2"; 
+    grid-area: section-area; 
+  }
+  .section1 { grid-area: section1; }
+  .section2 { grid-area: section2; }
   
 }
     
